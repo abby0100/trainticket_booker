@@ -13,7 +13,7 @@ class Ticket(object):
         self.config_file = config_file
         self.settings = configparser.ConfigParser()
         self.settings._interpolation = configparser.ExtendedInterpolation()
-        self.settings.read(self.config_file)
+        self.settings.read(self.config_file,'utf-8')
         ## environment setting
         self.brower='chrome'
         self.b = Browser(driver_name=self.brower) 
